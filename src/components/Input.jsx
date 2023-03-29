@@ -1,19 +1,17 @@
-import React from "react";
+import React from 'react';
 
-const Input = () => {
-  
-    const [input, setInput] = newState('');
-
+const InputScreen = () => {
   const submitInput = (e) => {
     e.preventDefault();
-    setInput(e.target.value);
-  }
+    // setTodo({ id: uuidv4, title: e.target.value, completed: false });
+  };
 
   return (
     <form action="submit">
-      <input type="text" placeholder="Add Todo..." onSubmit={submitInput}/> <button>ADD</button>
+      <input type="text" placeholder="Add Todo..." />
+      <button type="submit" onSubmit={submitInput}>ADD</button>
     </form>
   );
-}
+};
 
-export default Input;
+export default InputScreen;
